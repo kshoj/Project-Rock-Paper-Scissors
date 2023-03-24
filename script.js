@@ -6,3 +6,7 @@ function getComputerChoice() {
     computerSelection = choices[random];
     console.log(computerSelection);
 }
+
+let playerSelection = prompt('What is your weapon of choice?');
+let computerSelection = getComputerChoice();
+
