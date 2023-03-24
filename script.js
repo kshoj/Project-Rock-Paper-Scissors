@@ -14,23 +14,49 @@ function playRound() {
     let computerSelection = getComputerChoice();
 
     if (playerSelection == computerSelection) {
-        console.log('it\'s a tie!');
+        console.log('it\'s a tie round!');
     
     } else if (playerSelection == 'rock') {
         if (computerSelection == 'paper') {
-            console.log('you lost!');
+            console.log('you lost this round!');
+            return false;
         }else {
-            console.log('you won!');
+            console.log('you won this round!');
+            return true;
         }
     } else if (playerSelection =='paper')
-    if (computerSelection == 'scissor') {
-        console.log('you lost!');
-    }else {
-        console.log('you won!');
+        if (computerSelection == 'scissor') {
+            console.log('you lost this round!');
+            return false;
+        }else {
+            console.log('you won this round!');
+            return true;
     } else if (playerSelection =='scissor')
-    if (computerSelection == 'rock') {
-        console.log('you lost!');
-    }else {
-        console.log('you won!');
+        if (computerSelection == 'rock') {
+            console.log('you lost this round!');
+            return false;
+        }else {
+            console.log('you won this round!');
+            return true;
+    }
+}
+function game() {
+    wins = 0;
+    losses = 0;
+    for (i=0; i <= 5; i++) {
+        playRound()
+                if (playRound() == true) {
+            wins++;
+            } else if (playRound() == false){
+            losses++;
+        }
+    }
+
+    if (wins > losses) {
+        console.log ('you won the game!');
+    } else if (losses > wins) {
+        console.log ('you lost the game!');
+    } else {
+        console.log ('it\'s a tie game!');
     }
 }
