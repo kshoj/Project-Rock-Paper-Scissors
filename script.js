@@ -3,5 +3,6 @@ function getComputerChoice() {
     const choices = ["Rock", "Paper", "Scissor"];
 
     const random = Math.floor(Math.random() * choices.length);
-    console.log(choices[random]);
+    computerSelection = choices[random];
+    console.log(computerSelection);
 }
