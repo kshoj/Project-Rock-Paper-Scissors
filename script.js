@@ -7,11 +7,12 @@ function getComputerChoice() {
     return(choices[random]);
 }
 
-let playerSelection = prompt('What is your weapon of choice?');
-playerSelection = playerSelection.toLowerCase()
-let computerSelection = getComputerChoice();
-
 function playRound() {
+
+    let playerSelection = prompt('What is your weapon of choice?');
+    playerSelection = playerSelection.toLowerCase()
+    let computerSelection = getComputerChoice();
+
     if (playerSelection == computerSelection) {
         console.log('it\'s a tie!');
     
@@ -33,7 +34,3 @@ function playRound() {
         console.log('you won!');
     }
 }
-
-playRound();
-
-
